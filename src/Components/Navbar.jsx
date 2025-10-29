@@ -86,7 +86,7 @@ const Navbar = () => {
 
           {/* Download CV Button */}
           <a
-            href="/Suzana_Sohorab_CV.pdf" // place CV file in /public
+            href="/src/Resume/MY-Web-Resume.pdf" // place CV file in /public
             download
             className="px-4 py-2 bg-[#2563eb] hover:bg-[#1e40af] text-white rounded-full text-sm font-medium shadow-sm hover:shadow-md transition"
           >

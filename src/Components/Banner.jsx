@@ -33,7 +33,7 @@ const Banner = () => {
         </p>
 
         <button
-  onClick={() => window.open("https://github.com/SuzanaSohorab?tab=repositories", "_blank")}
+  onClick={() => window.open("https://github.com/SuzanaSohorab", "_blank")}
   className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition duration-300"
 >
   Go to Github →

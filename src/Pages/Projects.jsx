@@ -27,7 +27,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "Vite", "CSS"],
       image: "/projects/suzipi-app.png",
       github: "https://github.com/yourusername/suzipi-app-store",
-      live: "https://suzipi-app-store.netlify.app",
+      live: "https://suzupi-app-store.netlify.app",
     },
   ];
 
