@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useTheme } from "./ThemeContext";
+
 
 const Navbar = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  // Theme toggle logic
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const { theme, toggleTheme } = useTheme();
 
   const links = [
     { name: "Home", href: "#home" },
@@ -56,7 +44,7 @@ const Navbar = () => {
             aria-label="Toggle theme"
           >
             {theme === "light" ? (
-              // 🌙 Dark Mode Icon
+              // 🌙 Moon Icon for Dark Mode
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 text-gray-800"
@@ -68,25 +56,31 @@ const Navbar = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-7.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                 />
               </svg>
             ) : (
-              // ☀️ Light Mode Icon
+              // ☀️ Sun Icon for Light Mode
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 text-yellow-400"
-                fill="currentColor"
+                fill="none"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path d="M21.64 13.03A9 9 0 0111 2a9 9 0 000 18 9.001 9.001 0 0010.64-6.97z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
               </svg>
             )}
           </button>
 
           {/* Download CV Button */}
           <a
-            href="/src/Resume/MY-Web-Resume.pdf" // place CV file in /public
+            href="/src/Resume/MY-Web-Resume.pdf"
             download
             className="px-4 py-2 bg-[#2563eb] hover:bg-[#1e40af] text-white rounded-full text-sm font-medium shadow-sm hover:shadow-md transition"
           >

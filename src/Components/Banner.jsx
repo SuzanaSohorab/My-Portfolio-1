@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import myPic from "../assets/mypic.jpg"; // replace with your image path
 
 
-const gitlink = ('https://github.com/SuzanaSohorab?tab=repositories')
+const gitlink = ('https://github.com/SuzanaSohorab')
 const Banner = () => {
   return (
     <section className="bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#334155] text-white min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-12 transition-all duration-500">
